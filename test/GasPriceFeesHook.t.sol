@@ -143,7 +143,7 @@ contract TestGasPriceFeesHook is Test, Deployers {
         swapRouter.swap(key, params, testSettings, ZERO_BYTES);
         balanceOfToken1After = currency1.balanceOfSelf();
 
-        uint outputFromDecreasedFeeSwap = balanceOfToken1After -
+        uint256 outputFromDecreasedFeeSwap = balanceOfToken1After -
             balanceOfToken1Before;
 
         assertGt(balanceOfToken1After, balanceOfToken1Before);
